@@ -100,6 +100,6 @@
             console.log(conditionName)
             setInterval(()=>{
                 new Notification(`${locationName} Temperature:${degree}degree \n Condition:${conditionName}`)
-            },10000)
+            },30000)
            
         }
