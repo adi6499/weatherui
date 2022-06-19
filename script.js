@@ -32,6 +32,21 @@
             name.innerHTML=data.name
             country.innerHTML =data.sys.country  
             animationDelay()
+            hello(Math.floor(data.main.temp - 274.14),data.name,data.weather[0].description)
+
+
+            
+
+        window.addEventListener("load",()=>{
+           
+            
+            if (Notification.permission !== "granted"){
+                Notification.requestPermission()
+              
+            }else{
+                hello()
+            }
+        })
         }
 
 
@@ -78,3 +93,13 @@
             deg++
 
         }, 100);
+
+
+
+        function hello(degree,locationName,conditionName){
+            console.log(conditionName)
+            setInterval(()=>{
+                new Notification(`${locationName} Temperature:${degree}degree \n Condition:${conditionName}`)
+            },10000)
+           
+        }
