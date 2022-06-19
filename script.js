@@ -92,7 +92,7 @@
             contain.style.backgroundImage = `linear-gradient(${deg}deg,rgba(0, 0, 0, 0.854),rgba(0, 0, 0, 0.26)),url(./images/cloud${i}.jpg)`
             deg++
 
-        }, 50);
+        }, 10);
 
 
 
