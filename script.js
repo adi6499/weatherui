@@ -92,21 +92,36 @@
 
         i = 0;
         let deg = 0
+        window.addEventListener("load",async()=>{
+            
+            let image = await fetch("https://peapix.com/bing/feed")
+            let data = await image.json()
+            console.log(data)
+            
+               
+                
+    
+        
+       
+
         setInterval(() => {
-            if (i >= 26) {
-                i = 0;
+         
+           let hour = new Date().getHours().toString().split("")
+
+            
+            
+           
+            if(hour >= data.length){
+                hour[0] =0
             }
-            contain.style.backgroundImage = `linear-gradient(${deg}deg,rgba(0, 0, 0, 0.854),rgba(0, 0, 0, 0.26)),url(./images/cloud${i}.jpg)`
-            i++
-
-        },1000*60);
-
-        setInterval(() => {
-            contain.style.backgroundImage = `linear-gradient(${deg}deg,rgba(0, 0, 0, 0.854),rgba(0, 0, 0, 0.26)),url(./images/cloud${i}.jpg)`
+            
+           
+            contain.style.backgroundImage = `linear-gradient(${deg}deg,rgba(0, 0, 0, 0.854),rgba(0, 0, 0, 0.26)),url(${data[hour[0]].fullUrl})`
             deg++
-
-        }, 100);
-
+           
+        }, 1000);
+    
+    })
 
 
         function hello(degree,locationName,conditionName){
