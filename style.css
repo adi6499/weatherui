@@ -103,6 +103,10 @@
     padding: 1vmin;
 
 }
+.block:hover{
+    background:rgba(255, 255, 255, 0.201);
+    color:rgb(255, 255, 255);
+}
 
 .animation {
     animation: blocks 1s linear forwards;
