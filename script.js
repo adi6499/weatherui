@@ -18,7 +18,7 @@
 
 
         set.addEventListener("click", locationData)
-        window.addEventListener("load",(e)=>{
+      
         async function locationData() {
           
            
@@ -132,4 +132,4 @@
                 new Notification(`${locationName} Temperature:${degree}degree \n Condition:${conditionName}`)
             },100000)
            
-        }
+        
