@@ -20,8 +20,10 @@
         set.addEventListener("click", locationData)
 
         async function locationData() {
+          
+             loc.value="mumbai"
            
-            let url = `https://api.openweathermap.org/data/2.5/weather?q=${loc.value}&appid=b4c40c9560455f7c1458b63bbfeb2560`;
+            let url = `https://api.openweathermap.org/data/2.5/weather?q=${ loc.value}&appid=b4c40c9560455f7c1458b63bbfeb2560`;
            try{
             let resp = await fetch(url)
             
