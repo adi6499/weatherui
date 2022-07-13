@@ -18,7 +18,7 @@
 
 
         set.addEventListener("click", locationData)
-
+        window.addEventListener("load",(e)=>{
         async function locationData() {
           
              loc.value="mumbai"
@@ -77,7 +77,7 @@
         }
 
 
-
+        }
 
 
 
