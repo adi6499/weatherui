@@ -18,11 +18,9 @@
 
 
         set.addEventListener("click", locationData)
-      
+
         async function locationData() {
-          
-           
-           
+            
             let url = `https://api.openweathermap.org/data/2.5/weather?q=${loc.value}&appid=b4c40c9560455f7c1458b63bbfeb2560`;
            try{
             let resp = await fetch(url)
@@ -77,7 +75,7 @@
         }
 
 
-        
+
 
 
 
@@ -132,4 +130,5 @@
                 new Notification(`${locationName} Temperature:${degree}degree \n Condition:${conditionName}`)
             },100000)
            
+        }
         
